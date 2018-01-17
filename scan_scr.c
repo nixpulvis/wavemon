@@ -250,7 +250,7 @@ int scr_aplst_loop(WINDOW *w_menu)
 
 void scr_aplst_fini(void)
 {
-	pthread_cancel(scan_thread);
 	scan_result_fini(&sr);
+	pthread_cancel(scan_thread);
 	delwin(w_aplst);
 }
